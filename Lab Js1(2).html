@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Total and Average</title>
+</head>
+<body>
+
+<h3>Enter 5 marks:</h3>
+<input type="number" id="mark1">
+<input type="number" id="mark2">
+<input type="number" id="mark3">
+<input type="number" id="mark4">
+<input type="number" id="mark5">
+<br>
+<button onclick="calculateGrade()">Grade</button>
+
+<script>
+    function calculateGrade() {
+        
+        var mark1 = parseInt(document.getElementById('mark1').value);
+        var mark2 = parseInt(document.getElementById('mark2').value);
+        var mark3 = parseInt(document.getElementById('mark3').value);
+        var mark4 = parseInt(document.getElementById('mark4').value);
+        var mark5 = parseInt(document.getElementById('mark5').value);
+
+        
+        var total = mark1 + mark2 + mark3 + mark4 + mark5;
+        var average = total / 5;
+
+
+        alert("Total marks: " + total + "\nAverage marks: " + average.toFixed(2));
+
+        
+        if (average > 30) {
+            alert("Congrats! You passed.");
+        } else {
+            alert("Better luck next time.");
+        }
+    }
+</script>
+
+</body>
+</html>

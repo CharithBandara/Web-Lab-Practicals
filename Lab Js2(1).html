@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Date and Time</title>
+</head>
+<body>
+
+<p id="datetime"></p>
+
+<script>
+    function displayDateTime() {
+        var dateTimeElement = document.getElementById("datetime");
+        var currentDate = new Date();
+
+        var options = {
+            
+            year: "numeric", 
+            month: "long", 
+            day: "numeric", 
+            hour: "2-digit", 
+            minute: "2-digit", 
+            
+        };
+
+        var formattedDateTime = currentDate.toLocaleDateString(undefined, options) + " - " + currentDate.toLocaleTimeString();
+
+        dateTimeElement.textContent = "Current Date and Time: " + formattedDateTime;
+    }
+
+    displayDateTime();
+</script>
+
+</body>
+</html>

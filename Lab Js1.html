@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Message Box Example</title>
+</head>
+<body>
+
+<button id="popupButton">Button</button>
+
+<script>
+
+    function displayPopup() {
+        alert('this is alert!');
+    }
+
+
+    var button = document.getElementById('popupButton');
+    button.addEventListener('click', displayPopup);
+</script>
+
+</body>
+</html>
